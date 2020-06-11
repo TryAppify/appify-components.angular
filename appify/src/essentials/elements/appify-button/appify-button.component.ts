@@ -1,8 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-enum ButtonType {
-    square,
-    rounded
+export enum ButtonType {
+    square = 'square',
+    rounded = 'rounded',
+    open = 'open'
 }
 
 @Component({
