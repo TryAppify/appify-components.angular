@@ -1,0 +1,110 @@
+:root {
+    /* Typography */
+    --typography-h1-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h1-font-style: normal;
+    --typography-h1-font-weight: bold;
+    --typography-h1-font-size: 64px;
+    --typography-h1-line-height: 78px;
+    --typography-h1-letter-spacing: 0em;
+    --typography-h1-text-transform: none;
+
+    --typography-h2-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h2-font-style: normal;
+    --typography-h2-font-weight: bold;
+    --typography-h2-font-size: 56px;
+    --typography-h2-line-height: 68px;
+    --typography-h2-letter-spacing: 0em;
+    --typography-h2-text-transform: none;
+
+    --typography-h3-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h3-font-style: normal;
+    --typography-h3-font-weight: bold;
+    --typography-h3-font-size: 40px;
+    --typography-h3-line-height: 49px;
+    --typography-h3-letter-spacing: 0em;
+    --typography-h3-text-transform: none;
+
+    --typography-h4-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h4-font-style: normal;
+    --typography-h4-font-weight: bold;
+    --typography-h4-font-size: 32px;
+    --typography-h4-line-height: 39px;
+    --typography-h4-letter-spacing: 0em;
+    --typography-h4-text-transform: none;
+
+    --typography-h5-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h5-font-style: normal;
+    --typography-h5-font-weight: bold;
+    --typography-h5-font-size: 24px;
+    --typography-h5-line-height: 29px;
+    --typography-h5-letter-spacing: 0em;
+    --typography-h5-text-transform: none;
+
+    --typography-h6-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-h6-font-style: normal;
+    --typography-h6-font-weight: bold;
+    --typography-h6-font-size: 20px;
+    --typography-h6-line-height: 24px;
+    --typography-h6-letter-spacing: 0em;
+    --typography-h6-text-transform: none;
+
+    --typography-subtitle-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-subtitle-font-style: normal;
+    --typography-subtitle-font-weight: 500;
+    --typography-subtitle-font-size: 18px;
+    --typography-subtitle-line-height: 27px;
+    --typography-subtitle-letter-spacing: 0em;
+    --typography-subtitle-text-transform: none;
+
+    --typography-paragraph-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-paragraph-font-style: normal;
+    --typography-paragraph-font-weight: normal;
+    --typography-paragraph-font-size: 16px;
+    --typography-paragraph-line-height: 20px;
+    --typography-paragraph-letter-spacing: 0em;
+    --typography-paragraph-text-transform: none;
+
+    --typography-paragraph-strong-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-paragraph-strong-font-style: normal;
+    --typography-paragraph-strong-font-weight: bold;
+    --typography-paragraph-strong-font-size: 16px;
+    --typography-paragraph-strong-line-height: 18px;
+    --typography-paragraph-strong-letter-spacing: 0em;
+    --typography-paragraph-strong-text-transform: none;
+
+    --typography-caption-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-caption-font-style: normal;
+    --typography-caption-font-weight: normal;
+    --typography-caption-font-size: 12px;
+    --typography-caption-line-height: 16px;
+    --typography-caption-letter-spacing: 0em;
+    --typography-caption-text-transform: none;
+
+    --typography-caption-strong-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-caption-strong-font-style: normal;
+    --typography-caption-strong-font-weight: bold;
+    --typography-caption-strong-font-size: 12px;
+    --typography-caption-strong-line-height: 16px;
+    --typography-caption-strong-letter-spacing: 0em;
+    --typography-caption-strong-text-transform: none;
+
+    --typography-label-font-family: 'Proxima Nova', Sans-Serif;
+    --typography-label-font-style: normal;
+    --typography-label-font-weight: bold;
+    --typography-label-font-size: 12px;
+    --typography-label-line-height: 16px;
+    --typography-label-letter-spacing: 0.1em;
+    --typography-label-text-transform: uppercase;
+
+    /* Colors */
+    --color-primary: #2400FF;
+    --color-secondary: #FF00B8;
+    --color-success: #3BCB2F;
+    --color-warning: #F2B61C;
+    --color-error: #E70808;
+    --color-black: #050A16;
+    --color-dark-grey: #434855;
+    --color-grey: #717683;
+    --color-light-grey: #C8CDDB;
+    --color-white: #000000;
+}
