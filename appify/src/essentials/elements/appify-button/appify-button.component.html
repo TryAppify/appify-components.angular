@@ -1,5 +1,6 @@
 <button (click)="click()"
         type="button"
-        [class.rounded]="buttonType == buttonTypeValue.rounded">
+        [class.rounded]="buttonType == buttonTypeValue.rounded"
+        [class.open]="buttonType == buttonTypeValue.open">
     {{ title }}
 </button>

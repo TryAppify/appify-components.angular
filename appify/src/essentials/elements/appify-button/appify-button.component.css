@@ -20,3 +20,9 @@ button {
     border: 1px solid var(--color-primary);
     border-radius: 20px;
 }
+
+.open {
+    border: 0;
+    color: var(--color-primary);
+    background: var(--color-white);
+}
