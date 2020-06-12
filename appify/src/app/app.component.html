@@ -1,5 +1,46 @@
+<h1 class="h1">H1 Headline</h1>
+<h2 class="h2">H2 Headline</h2>
+<h3 class="h3">H3 Headline</h3>
+<h4 class="h4">H4 Headline</h4>
+<h5 class="h5">H5 Headline</h5>
+<h6 class="h6">H6 Headline</h6>
+<p class="subtitle">Subtitle</p>
+<p class="paragraph">Paragraph</p>
+<p class="paragraph-strong">Paragraph Strong</p>
+<caption class="caption">Caption</caption> <br />
+<caption class="caption-strong">Caption</caption> <br />
+<label class="label">Label</label>
 
-<h2>Button</h2>
-<appify-button [title]="'Square'" [buttonType]="'square'"></appify-button> <br /><br />
-<appify-button [title]="'Rounded'" [buttonType]="'rounded'"></appify-button> <br /><br />
-<appify-button [title]="'Open'" [buttonType]="'open'"></appify-button>
+<hr />
+
+<h3 class="h3">Button</h3>
+<appify-button [title]="'Square Filled'" [buttonType]="'square'" [buttonFillType]="'filled'"></appify-button> <br /><br />
+<appify-button [title]="'Square Border'" [buttonType]="'square'" [buttonFillType]="'border'"></appify-button> <br /><br />
+<appify-button [title]="'Rounded Filled'" [buttonType]="'rounded'" [buttonFillType]="'filled'"></appify-button> <br /><br />
+<appify-button [title]="'Rounded Border'" [buttonType]="'rounded'" [buttonFillType]="'border'"></appify-button>
+
+<hr />
+
+<h3 class="h3">Hero</h3>
+<appify-hero [heroAlignment]="'center'"
+             [headline]="'This is a headline!'"
+             [subtitle]="'This is a subtitle below the headline.'"
+             [buttonText]="'Button'"></appify-hero>
+
+<hr />
+
+<h3 class="h3">Feature</h3>
+<appify-feature></appify-feature>
+
+<hr />
+
+<h3 class="h3">Call to Action</h3>
+<appify-cta [headline]="'Sign Up Today!'"
+            [subtitle]="'This is a subtitle below the headline.'"
+            [buttonText]="'Button'"></appify-cta>
+
+<hr />
+
+<h3 class="h3">Grid</h3>
+<appify-grid [headline]="'Heading'"
+             [subtitle]="'Subtitle'"></appify-grid>

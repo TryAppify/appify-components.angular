@@ -1,10 +1,10 @@
 button {
     cursor: pointer;
     padding: 12px 32px;
-    background: var(--color-primary);
     box-sizing: border-box;
-    border: none;
-    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    color: var(--color-primary);
+    background: var(--color-white);
     font-family: var(--typography-label-font-family);
     font-style: var(--typography-label-font-style);
     font-weight: var(--typography-label-font-weight);
@@ -15,14 +15,27 @@ button {
 }
 
 .rounded {
-    color: var(--color-primary);
-    background: var(--color-white);
-    border: 1px solid var(--color-primary);
-    border-radius: 20px;
+    border-radius: 9999px;
 }
 
-.open {
-    border: 0;
+.border {
     color: var(--color-primary);
-    background: var(--color-white);
+    background: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.border:hover {
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+.filled {
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.filled:hover {
+    color: var(--color-primary);
+    background: transparent;
 }

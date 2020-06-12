@@ -1,0 +1,11 @@
+<div id="container"
+     [ngStyle]="{'background-image': 'url(' + backgroundURL + ')'}">
+    <div id="container-inner">
+        <h1 class="h1">{{ headline }}</h1>
+        <p class="subtitle">{{ subtitle }}</p>
+
+        <div>
+            <appify-button [title]="buttonText" [buttonType]="'square'"></appify-button>
+        </div>
+    </div>
+</div>

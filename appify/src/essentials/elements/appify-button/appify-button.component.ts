@@ -2,8 +2,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export enum ButtonType {
     square = 'square',
-    rounded = 'rounded',
-    open = 'open'
+    rounded = 'rounded'
+}
+
+export enum ButtonFillType {
+    filled = 'filled',
+    border = 'border'
 }
 
 @Component({
@@ -13,12 +17,14 @@ export enum ButtonType {
 })
 export class AppifyButtonComponent implements OnInit {
     @Input() buttonType: ButtonType = ButtonType.square
+    @Input() buttonFillType: ButtonFillType = ButtonFillType.filled
     @Input() title: String = ''
     @Output() selected = new EventEmitter<any>();
 
-    /// Return the buttonType value computed in the component since enum is not
+    /// Return the enum value computed in the component since enum is not
     /// accessible outside of this scope.
     get buttonTypeValue() { return ButtonType; }
+    get buttonFillTypeValue() { return ButtonFillType; }
 
     constructor() { }
 
