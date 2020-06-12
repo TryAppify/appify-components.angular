@@ -1,0 +1,40 @@
+#container {
+    width: 100%;
+    background: lightgray;
+}
+
+#inner-container {
+    padding: 128px 200px;
+    display: table;
+}
+
+.left-align-container {
+    direction: rtl;
+}
+
+.left-align-inner {
+    direction: ltr;
+}
+
+img {
+    height: auto;
+    width: calc(100% - 48px);
+}
+
+.col {
+    display: table-cell;
+}
+
+.col-l {
+    vertical-align: top;
+}
+
+.col-r {
+    vertical-align: middle;
+    margin-left: 48px;
+    width: calc(50% - 48px);
+}
+
+.col-r > div {
+    margin-top: 24px;
+}

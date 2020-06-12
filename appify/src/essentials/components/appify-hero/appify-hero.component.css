@@ -1,0 +1,15 @@
+#container {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div > div {
+    padding: 160px 265px;
+}
+
+div > div > div {
+    margin-top: 24px;
+    padding: 0;
+}
