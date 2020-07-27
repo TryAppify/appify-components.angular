@@ -1,6 +1,7 @@
 #container {
     width: 100%;
-    background: lightgray;
+    color: var(--color-foreground);
+    background: var(--color-background);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

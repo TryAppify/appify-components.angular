@@ -1,11 +1,16 @@
 #container {
     width: 100%;
-    background: lightgray;
+    color: var(--color-foreground);
+    background: var(--color-background);
 }
 
 #inner-container {
     padding: 128px 200px;
     display: table;
+}
+
+caption {
+    display: inline;
 }
 
 .left-align-container {

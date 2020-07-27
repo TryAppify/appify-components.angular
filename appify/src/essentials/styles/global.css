@@ -99,6 +99,9 @@
     --typography-label-text-transform: uppercase;
 
     /* Colors */
+    --color-background: gray;
+    --color-foreground: black;
+
     --color-primary: #2400FF;
     --color-primary-1: #2400FF;
     --color-primary-2: #2400FF;

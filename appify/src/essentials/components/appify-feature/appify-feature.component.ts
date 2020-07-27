@@ -14,7 +14,12 @@ export enum FeatureAlignment {
 })
 export class AppifyFeatureComponent implements OnInit {
     @Input() featureAlignment: FeatureAlignment = FeatureAlignment.center
-    @Input() buttonText: String = 'Learn More'
+    @Input() imageURL: string = 'https://via.placeholder.com/400x400'
+    @Input() title: string = 'Title'
+    @Input() subtitle: string = 'Subtitle'
+    @Input() body: string = 'Body'
+    @Input() buttonText: string = 'Learn More'
+    @Input() buttonURL: string = ''
 
     /// Return the heroAlignment value computed in the component since enum is not
     /// accessible outside of this scope.
@@ -25,4 +30,7 @@ export class AppifyFeatureComponent implements OnInit {
     ngOnInit() {
     }
 
+    clickButton() {
+        window.open(this.buttonURL, '_blank');
+    }
 }
