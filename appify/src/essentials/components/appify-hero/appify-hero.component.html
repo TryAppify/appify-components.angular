@@ -7,7 +7,7 @@
         <p class="subtitle">{{ subtitle }}</p>
 
         <div>
-            <appify-button [title]="buttonText" [buttonType]="'square'"></appify-button>
+            <appify-button [title]="buttonText" [buttonType]="'square'" (selected)="clickButton()"></appify-button>
         </div>
     </div>
 </div>

@@ -13,11 +13,11 @@ export enum HeroAlignment {
 })
 export class AppifyHeroComponent implements OnInit {
     @Input() heroAlignment: HeroAlignment = HeroAlignment.left
-    @Input() headline: String = ''
-    @Input() subtitle: String = ''
-    @Input() buttonText: String = ''
-    @Input() buttonURL: String = ''
-    @Input() backgroundURL: String = 'https://via.placeholder.com/1400x500'
+    @Input() headline: string = ''
+    @Input() subtitle: string = ''
+    @Input() buttonText: string = ''
+    @Input() buttonURL: string = ''
+    @Input() backgroundURL: string = 'https://via.placeholder.com/1500x500'
 
     /// Return the heroAlignment value computed in the component since enum is not
     /// accessible outside of this scope.
@@ -28,4 +28,7 @@ export class AppifyHeroComponent implements OnInit {
     ngOnInit() {
     }
 
+    clickButton() {
+        window.open(this.buttonURL, '_blank');
+    }
 }

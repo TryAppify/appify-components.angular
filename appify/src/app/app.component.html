@@ -21,6 +21,31 @@
 
 <hr />
 
+<h3 class="h3">Text</h3>
+<appify-text [text]="'My Header'" [textType]="'header'"></appify-text>
+<appify-text [text]="'Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'" [textType]="'body'"></appify-text>
+
+<hr />
+
+<h3 class="h3">Image</h3>
+<appify-image [url]="'https://knowpathology.com.au/app/uploads/2018/07/Happy-Test-Screen-01.png'" [caption]="'Caption of the image.'"></appify-image>
+
+<hr />
+
+<h3 class="h3">Video</h3>
+<appify-video [url]="'https://www.youtube.com/embed/ZtfTOuSHGg8&ab_channel=YCombinator'" [caption]="'Caption of the video.'"></appify-video>
+
+<hr />
+
+<h3 class="h3">Space</h3>
+<appify-text [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'" [textType]="'body'"></appify-text>
+<appify-text [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'" [textType]="'body'"></appify-text>
+<appify-spacer [space]="'40'"></appify-spacer>
+<appify-text [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'" [textType]="'body'"></appify-text>
+<appify-text [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'" [textType]="'body'"></appify-text>
+
+<hr />
+
 <h3 class="h3">Hero</h3>
 <appify-hero [heroAlignment]="'center'"
              [headline]="'This is a headline!'"
@@ -44,3 +69,26 @@
 <h3 class="h3">Grid</h3>
 <appify-grid [headline]="'Heading'"
              [subtitle]="'Subtitle'"></appify-grid>
+
+<hr />
+
+<h3 class="h3">Carousel</h3>
+<appify-carousel></appify-carousel>
+
+<hr />
+
+<h3 class="h3">List</h3>
+<appify-list></appify-list>
+
+<hr />
+
+<h3 class="h3">Slider</h3>
+<appify-slider [sliderAlignment]="'center'"></appify-slider>
+
+<hr />
+
+<h3 class="h3">Navigation Header</h3>
+<appify-navigation-header></appify-navigation-header>
+
+<h3 class="h3">Navigation Footer</h3>
+<appify-navigation-footer [company]="'My Company'"></appify-navigation-footer>

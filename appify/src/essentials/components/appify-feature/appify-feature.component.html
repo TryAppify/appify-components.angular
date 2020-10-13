@@ -2,17 +2,17 @@
     <div id="inner-container"
          [class.left-align-container]="featureAlignment == featureAlignmentValue.left">
         <div class="col-2 col-l col">
-            <img src="https://via.placeholder.com/500x500" />
+            <img [src]="imageURL" />
         </div>
 
         <div class="col-2 col-r col"
              [class.left-align-inner]="featureAlignment == featureAlignmentValue.left">
-            <caption class="caption-strong">Introducing</caption>
-            <h3 class="h3">Jo Malone</h3>
-            <p class="subtitle">Escape the everyday along the windswept shore. Waves breaking white, the air fresh with sea salt and spray. Alive with the mineral scent of the rugged cliffs. Mingling with the woody earthiness of sage. Lively, spirited and totally joyful.</p>
+            <caption class="caption-strong">{{ title }}</caption>
+            <h3 class="h3">{{ subtitle }}</h3>
+            <p class="subtitle">{{ body }}</p>
 
             <div>
-                <appify-button [title]="buttonText" [buttonType]="'border'"></appify-button>
+                <appify-button [title]="buttonText" [buttonType]="'border'" (selected)="clickButton()"></appify-button>
             </div>
         </div>
     </div>

@@ -11,15 +11,16 @@
     padding: 85px 265px;
 }
 
-.grid-container {
+.carousel-container {
     margin-top: 42px;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-gap: 16px;
 }
 
-.grid-container > div {
+.carousel-container > div {
     width: 100%;
     height: auto;
     vertical-align: top;
+    cursor: pointer;
 }

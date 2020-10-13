@@ -1,0 +1,27 @@
+#container {
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container > div {
+    vertical-align: top;
+}
+
+#container > div:last-child {
+    flex: 1;
+}
+
+img {
+    width: 224px;
+    margin-right: 16px;
+}
+
+h3 {
+    margin: 0 0 16px 0;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4em;
+}

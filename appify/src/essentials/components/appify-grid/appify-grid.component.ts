@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AppifyGridComponent implements OnInit {
     @Input() headline: String = ''
     @Input() subtitle: String = ''
-    @Input() columns: Number = 5
+    @Input() columns: Number = 2
 
-    items: Array<any> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    items: Array<any> = [1, 2, 3, 4]
 
     constructor() { }
 
