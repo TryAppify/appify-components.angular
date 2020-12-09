@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./appify-spacer.component.css']
 })
 export class AppifySpacerComponent implements OnInit {
-    @Input() space: Number = 0
+    @Input() space: Number = 44
 
     constructor() { }
 
