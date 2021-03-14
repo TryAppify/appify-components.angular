@@ -1,0 +1,72 @@
+<div id="container"
+    [class.margin-width]="width == featureWidthValue.margin"
+    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+    [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
+    [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
+    [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''">
+    <div class="row feature-container"
+        [style.padding-left]="width == featureWidthValue.margin ? style?.padding?.left ? style?.padding?.left + 'px' : '' : '0'"
+        [style.padding-right]="width == featureWidthValue.margin ? style?.padding?.right ? style?.padding?.right + 'px' : '' : '0'"
+        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [class.vertical-align-top]="verticalAlignment == featureVerticalAlignmentValue.top"
+        [class.vertical-align-middle]="verticalAlignment == featureVerticalAlignmentValue.middle"
+        [class.vertical-align-bottom]="verticalAlignment == featureVerticalAlignmentValue.bottom">
+        <div *ngIf="featureAlignment == featureAlignmentValue.left"
+            class="col-md-6 col-sm-12 col-12 left-align-inner"
+            [class.full-width]="width == featureWidthValue.full">
+            <img [src]="imageURL" [style.minHeight]="minimumHeight + 'px'" />
+        </div>
+
+        <div class="text-container col-md-6 col-sm-12"
+             [class.left-align-inner]="featureAlignment == featureAlignmentValue.left"
+             [class.right-align-inner]="featureAlignment == featureAlignmentValue.right"
+             [style.padding-left]="width == featureWidthValue.full ? style?.padding?.left ? style?.padding?.left + 'px' : '' : '0'"
+             [style.padding-right]="width == featureWidthValue.full ? style?.padding?.right ? style?.padding?.right + 'px' : '' : '0'"
+             >
+            <caption class="label-s"
+                [style.color]="style?.heading?.color ? style?.heading?.color : ''"
+                [style.fontFamily]="style?.heading?.font ? style?.heading?.font : ''"
+                [style.fontSize]="style?.heading?.size ? style?.heading?.size + 'px' : ''"
+                [style.fontWeight]="style?.heading?.weight ? style?.heading?.weight : ''"
+                [style.lineHeight]="style?.heading?.lineHeight ? style?.heading?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.heading?.letterSpacing ? style?.heading?.letterSpacing + 'px' : ''"
+            >{{ title }}</caption>
+            <div class="vertical-item-spacing-small"></div>
+            <h3 class="headline-m"
+                [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+                [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+                [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
+                [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
+                [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.subtitle?.letterSpacing ? style?.subtitle?.letterSpacing + 'px' : ''"
+            >{{ subtitle }}</h3>
+            <div class="vertical-item-spacing"></div>
+            <p class="body-m"
+                [style.color]="style?.paragraph?.color ? style?.paragraph?.color : ''"
+                [style.fontFamily]="style?.paragraph?.font ? style?.paragraph?.font : ''"
+                [style.fontSize]="style?.paragraph?.size ? style?.paragraph?.size + 'px' : ''"
+                [style.fontWeight]="style?.paragraph?.weight ? style?.paragraph?.weight : ''"
+                [style.lineHeight]="style?.paragraph?.lineHeight ? style?.paragraph?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.paragraph?.letterSpacing ? style?.paragraph?.letterSpacing + 'px' : ''"
+            >{{ body }}</p>
+            <div class="vertical-item-spacing"></div>
+            <div>
+                <!-- [buttonType]="'border'" -->
+                <appify-button
+                    [title]="buttonText"
+                    [style]="style?.button"
+                    [padding]="buttonPadding"
+                    [alignment]="featureAlignment"
+                    (selected)="clickButton()"></appify-button>
+            </div>
+        </div>
+
+        <div *ngIf="featureAlignment == featureAlignmentValue.right"
+            class="col-md-6 col-sm-12 col-12 right-align-inner"
+            [class.full-width]="width == featureWidthValue.full">
+            <img [src]="imageURL" [style.minHeight]="minimumHeight + 'px'" />
+        </div>
+    </div>
+</div>

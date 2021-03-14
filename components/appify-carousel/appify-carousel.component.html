@@ -1,0 +1,39 @@
+<div id="container"
+    [style.text-align]="alignment == carouselAlignmentValue.center ? 'center' :
+                        alignment == carouselAlignmentValue.right ? 'right' : 'left'"
+    [class.margin-width]="width == carouselWidthValue.margin"
+    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+    [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''">
+    <div id="inner-container"
+        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+        <div class="carousel-container">
+            <div *ngFor="let item of items" class="col-6 col-md-3"
+            [style.text-align]="alignment == carouselAlignmentValue.center ? 'center' :
+                                alignment == carouselAlignmentValue.right ? 'right' : 'left'">
+                <img [src]="item.image" style="width: 100%; height: auto; vertical-align: top;" />
+                <div class="vertical-spacing-image"></div>
+                <h5 class="headline-xs"
+                    [style.color]="style?.title?.color ? style?.title?.color : ''"
+                    [style.fontFamily]="style?.title?.font ? style?.title?.font : ''"
+                    [style.fontSize]="style?.title?.size ? style?.title?.size + 'px' : ''"
+                    [style.fontWeight]="style?.title?.weight ? style?.title?.weight : ''"
+                    [style.lineHeight]="style?.title?.lineHeight ? style?.title?.lineHeight + 'px' : ''"
+                    [style.letter-spacing]="style?.title?.letterSpacing ? style?.title?.letterSpacing + 'px' : ''"
+                >{{ item.title }}</h5>
+                <div class="vertical-spacing-title"></div>
+                <p class="body-m"
+                    [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+                    [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+                    [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
+                    [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
+                    [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
+                    [style.letter-spacing]="style?.subtitle?.letterSpacing ? style?.subtitle?.letterSpacing + 'px' : ''"
+                >{{ item.subtitle }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    #outer-container {
+        padding: var(--spacing-medium) var(--spacing-medium) !important;
+    }
+
+    img {
+        width: 150px;
+    }
+}

@@ -1,0 +1,28 @@
+div {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    padding: var(--spacing-xSmall) var(--spacing-medium);
+    box-sizing: border-box;
+    border: var(--button-border-width) solid var(--button-border-color);
+    color: var(--button-text-color);
+    background: var(--button-background-color);
+    font-family: var(--typography-label-m-font-family);
+    font-style: var(--typography-label-m-font-style);
+    font-weight: var(--typography-label-m-font-weight);
+    font-size: var(--typography-label-m-font-size);
+    line-height: var(--typography-label-m-line-height);
+    letter-spacing: var(--typography-label-m-letter-spacing);
+    text-transform: var(--typography-label-m-text-transform);
+    text-align: center;
+    border-radius: var(--button-border-radius);
+    transition: 0.3s;
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
+}

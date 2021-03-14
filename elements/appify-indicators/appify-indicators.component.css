@@ -1,0 +1,33 @@
+.page-circle {
+    width: var(--spacing-xSmall);
+    height: var(--spacing-xSmall);
+    border-radius: 9999px;
+    background-color: #C4C4C4;
+    display: inline-block;
+    margin-right: var(--spacing-xSmall);
+    cursor: pointer;
+}
+
+.page-rectangle {
+    width: var(--spacing-medium);
+    height: var(--spacing-xxSmall);
+    border-radius: 0;
+    margin-right: var(--spacing-xSmall);
+    background-color: #C4C4C4;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page-square {
+    width: var(--spacing-xSmall);
+    height: var(--spacing-xSmall);
+    border-radius: 0;
+    background-color: #C4C4C4;
+    display: inline-block;
+    margin-right: var(--spacing-xSmall);
+    cursor: pointer;
+}
+
+.selected-page {
+    background-color: var(--color-primary);
+}

@@ -1,0 +1,56 @@
+<div id="container"
+     [class.margin-width]="width == ctaWidthValue.margin"
+     [ngStyle]="{'background-image': 'url(' + backgroundURL + ')'}"
+     [style.backgroundColor]="backgroundColor ? backgroundColor : ''"
+     [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+     [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''">
+    <div id="container-inner"
+        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+
+        <div id="text-container">
+            <h1 class="headline-l"
+                [style.color]="style?.headline?.color ? style?.headline?.color : ''"
+                [style.fontFamily]="style?.headline?.font ? style?.headline?.font : ''"
+                [style.fontSize]="style?.headline?.size ? style?.headline?.size + 'px' : ''"
+                [style.fontWeight]="style?.headline?.weight ? style?.headline?.weight : ''"
+                [style.lineHeight]="style?.headline?.lineHeight ? style?.headline?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.headline?.letterSpacing ? style?.headline?.letterSpacing + 'px' : ''"
+            >{{ headline }}</h1>
+
+            <div class="spacing-s"></div>
+
+            <p class="body-l"
+                [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+                [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+                [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
+                [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
+                [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.subtitle?.letterSpacing ? style?.subtitle?.letterSpacing + 'px' : ''"
+            >{{ subtitle }}</p>
+
+            <div class="spacing-s"></div>
+
+            <p class="body-m"
+                [style.color]="style?.paragraph?.color ? style?.paragraph?.color : ''"
+                [style.fontFamily]="style?.paragraph?.font ? style?.paragraph?.font : ''"
+                [style.fontSize]="style?.paragraph?.size ? style?.paragraph?.size + 'px' : ''"
+                [style.fontWeight]="style?.paragraph?.weight ? style?.paragraph?.weight : ''"
+                [style.lineHeight]="style?.paragraph?.lineHeight ? style?.paragraph?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.paragraph?.letterSpacing ? style?.paragraph?.letterSpacing + 'px' : ''"
+            >{{ paragraph }}</p>
+        </div>
+
+        <div id="button-container" *ngIf="buttonText?.length">
+            <div>
+                <!-- [buttonType]="'square'" -->
+                <appify-button
+                    [title]="buttonText"
+                    [style]="style?.button"
+                    (selected)="clickButton()"></appify-button>
+            </div>
+        </div>
+    </div>
+</div>

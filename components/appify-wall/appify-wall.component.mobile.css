@@ -1,0 +1,5 @@
+@media screen and (max-width: 480px) {
+    #inner-container {
+        zoom: 0.5;
+    }
+}

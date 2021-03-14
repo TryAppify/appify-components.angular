@@ -1,0 +1,45 @@
+<div id="container"
+    [class.margin-width]="width == testimonialWidthValue.margin"
+    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+    [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
+    [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
+    [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''">
+    <div id="inner-container"
+        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+        <div id="image-container">
+            <img *ngIf="items.length > selectedIndex" [src]="items[selectedIndex].image" />
+        </div>
+
+        <div id="spacer"></div>
+
+        <div id="content-container">
+            <h1>“</h1>
+            <p class="body-l"
+                *ngIf="items.length > selectedIndex"
+                [style.color]="style?.headline?.color ? style?.headline?.color : ''"
+                [style.fontFamily]="style?.headline?.font ? style?.headline?.font : ''"
+                [style.fontSize]="style?.headline?.size ? style?.headline?.size + 'px' : ''"
+                [style.fontWeight]="style?.headline?.weight ? style?.headline?.weight : ''"
+                [style.lineHeight]="style?.headline?.lineHeight ? style?.headline?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.headline?.letterSpacing ? style?.headline?.letterSpacing + 'px' : ''"
+            >{{ items[selectedIndex].headline }}</p>
+            <h5 class="body-m"
+                *ngIf="items.length > selectedIndex"
+                [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+                [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+                [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
+                [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
+                [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.subtitle?.letterSpacing ? style?.subtitle?.letterSpacing + 'px' : ''"
+            >{{ items[selectedIndex].subtitle }}</h5>
+
+            <div id="page-dot-container" *ngIf="items.length > 1">
+                <appify-indicators [count]="items.length" (didSelectIndex)="selectedIndex = $event"></appify-indicators>
+            </div>
+        </div>
+    </div>
+</div>

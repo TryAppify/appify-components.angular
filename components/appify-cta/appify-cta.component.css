@@ -1,0 +1,37 @@
+#container {
+    width: 100%;
+    text-align: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-secondary);
+}
+
+#container-inner {
+    padding: var(--spacing-xxLarge);
+    display: flex;
+}
+
+#text-container {
+    flex: 1;
+}
+
+#button-container {
+    position: relative;
+    transform: translateY(35%);
+}
+
+#button-container > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
+}
+
+.spacing-s {
+    height: var(--spacing-small);
+}

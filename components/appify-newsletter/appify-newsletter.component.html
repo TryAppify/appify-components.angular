@@ -1,0 +1,43 @@
+<div id="container"
+     [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}"
+     [class.margin-width]="width == newsletterWidthValue.margin"
+     [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+     [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+     [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
+     [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
+     [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''">
+    <div id="container-inner"
+        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+        <h1 class="headline-m"
+            [style.color]="style?.headline?.color ? style?.headline?.color : ''"
+            [style.fontFamily]="style?.headline?.font ? style?.headline?.font : ''"
+            [style.fontSize]="style?.headline?.size ? style?.headline?.size + 'px' : ''"
+            [style.fontWeight]="style?.headline?.weight ? style?.headline?.weight : ''"
+            [style.lineHeight]="style?.headline?.lineHeight ? style?.headline?.lineHeight + 'px' : ''"
+        >{{ headline }}</h1>
+
+        <div class="spacing-s"></div>
+
+        <p class="body-l"
+            [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+            [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+            [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
+            [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
+            [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
+        >{{ subtitle }}</p>
+
+        <div class="spacing-s"></div>
+
+        <input type="email" placeholder="Enter email address" class="subtitle" />
+
+        <div id="button-container">
+            <appify-button
+                [title]="buttonText"
+                [style]="style?.button"
+                (didClick)="showAlert()"></appify-button>
+        </div>
+    </div>
+</div>

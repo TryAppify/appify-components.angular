@@ -1,0 +1,9 @@
+@media screen and (max-width: 480px) {
+    #container-inner {
+        padding: var(--spacing-medium) var(--spacing-mediumSmall) !important;
+    }
+
+    input {
+        width: 100%;
+    }
+}

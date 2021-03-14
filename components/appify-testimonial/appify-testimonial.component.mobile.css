@@ -1,0 +1,10 @@
+@media screen and (max-width: 480px) {
+    #inner-container {
+        display: block;
+        padding: var(--spacing-medium) var(--spacing-mediumSmall) !important;
+    }
+
+    #content-container {
+        width: 100%;
+    }
+}

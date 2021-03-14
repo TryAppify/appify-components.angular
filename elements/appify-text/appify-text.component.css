@@ -1,0 +1,10 @@
+p {
+    max-width: var(--size-default-margin);
+    margin: auto;
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
+}

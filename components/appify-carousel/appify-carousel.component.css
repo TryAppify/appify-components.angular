@@ -1,0 +1,49 @@
+#container {
+    width: 100%;
+    color: var(--color-foreground);
+    background: var(--color-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#inner-container {
+    margin: auto;
+    padding: calc(var(--size-section-padding) / 2) var(--spacing-xxLarge);
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
+}
+
+.carousel-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.carousel-container > div {
+    vertical-align: top;
+    display: inline-block;
+}
+
+h5 {
+    white-space: pre-wrap;
+}
+
+p {
+    white-space: pre-wrap;
+}
+
+.vertical-spacing-image {
+    height: var(--spacing-mediumSmall);
+}
+
+.vertical-spacing-title {
+    height: var(--spacing-small);
+}
+
+.col {
+    padding-bottom: var(--spacing-mediumLarge);
+}

@@ -1,0 +1,36 @@
+<div id="outer-container"
+    [class.margin-width]="width == listWidthValue.margin"
+    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+    [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
+    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
+    [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
+    [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''"
+    [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+    [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+    [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+    [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+    <div id="container" *ngFor="let item of items">
+        <div>
+            <img [src]="item.image" />
+        </div>
+
+        <div>
+            <h3 class="headline-s"
+                [style.color]="style?.headline?.color ? style?.headline?.color : ''"
+                [style.fontFamily]="style?.headline?.font ? style?.headline?.font : ''"
+                [style.fontSize]="style?.headline?.size ? style?.headline?.size + 'px' : ''"
+                [style.fontWeight]="style?.headline?.weight ? style?.headline?.weight : ''"
+                [style.lineHeight]="style?.headline?.lineHeight ? style?.headline?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.headline?.letterSpacing ? style?.headline?.letterSpacing + 'px' : ''"
+            >{{ item.header }}</h3>
+            <p class="body-m"
+                [style.color]="style?.body?.color ? style?.body?.color : ''"
+                [style.fontFamily]="style?.body?.font ? style?.body?.font : ''"
+                [style.fontSize]="style?.body?.size ? style?.body?.size + 'px' : ''"
+                [style.fontWeight]="style?.body?.weight ? style?.body?.weight : ''"
+                [style.lineHeight]="style?.body?.lineHeight ? style?.body?.lineHeight + 'px' : ''"
+                [style.letter-spacing]="style?.body?.letterSpacing ? style?.body?.letterSpacing + 'px' : ''"
+            >{{ item.body }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+@media screen and (max-width: 480px) {
+    .vertical-item-spacing-small {
+        height: var(--spacing-xxSmall);
+    }
+
+    .vertical-item-spacing {
+        height: var(--spacing-xSmall);
+    }
+
+    img {
+        min-height: auto !important;
+        max-width: 100% !important;
+    }
+
+    .text-container {
+        padding: var(--spacing-medium) var(--spacing-medium) !important;
+    }
+}

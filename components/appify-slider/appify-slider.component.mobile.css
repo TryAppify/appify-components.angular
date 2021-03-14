@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+    #contents {
+        /* padding: var(--spacing-large) var(--spacing-small) !important; */
+        padding-left: var(--spacing-small) !important;
+        padding-right: var(--spacing-small) !important;
+    }
+}

@@ -1,0 +1,64 @@
+#container {
+    position: relative;
+    width: 100%;
+    color: white;
+}
+
+#inner {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contents {
+    width: 100%;
+    padding: var(--spacing-xxLarge) var(--spacing-xxLarge);
+}
+
+#slider {
+    position: absolute;
+    bottom: var(--spacing-xSmall);
+    left: 0;
+    width: 50%;
+    transform: translateX(50%);
+    margin-left: -20px;
+}
+
+#slider > div {
+    width: var(--spacing-medium);
+    height: var(--spacing-xxSmall);
+    background: white;
+    display: inline-block;
+    margin-right: var(--spacing-xSmall);
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.row-container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
+}
+
+.vertical-align-top {
+    align-items: flex-start;
+}
+
+.vertical-align-middle {
+    align-items: center;
+}
+
+.vertical-align-bottom {
+    align-items: flex-end;
+}
+
+.spacing-ms {
+    height: var(--spacing-mediumSmall);
+}

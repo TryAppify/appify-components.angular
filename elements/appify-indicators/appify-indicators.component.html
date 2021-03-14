@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let t of temp(math.ceil(count / 1)).fill(0); let i = index;"
+        class="codeless-indicator"
+        [class.page-circle]="indicatorType == indicatorValue.circle"
+        [class.page-rectangle]="indicatorType == indicatorValue.rectangle"
+        [class.page-square]="indicatorType == indicatorValue.square"
+        [class.selected-page]="selectedIndex == i"
+        (click)="selectIndex(i);"></div>
+</div>

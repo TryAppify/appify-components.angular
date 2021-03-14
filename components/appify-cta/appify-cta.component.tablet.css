@@ -1,0 +1,6 @@
+@media screen and (max-width: 1024px) {
+    #container-inner {
+        display: block;
+        padding: var(--spacing-large);
+    }
+}

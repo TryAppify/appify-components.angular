@@ -1,0 +1,25 @@
+div {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+span {
+    margin: 0;
+    font-family: var(--typography-label-font-family);
+    font-style: var(--typography-label-font-style);
+    font-weight: var(--typography-label-font-weight);
+    font-size: var(--typography-label-font-size);
+    line-height: var(--typography-label-line-height);
+    letter-spacing: var(--typography-label-letter-spacing);
+    text-transform: var(--typography-label-text-transform);
+}
+
+.margin-width {
+    margin: auto;
+    max-width: var(--size-default-margin);
+    padding: 0 var(--spacing-small);
+}

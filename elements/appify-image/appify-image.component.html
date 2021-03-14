@@ -1,0 +1,11 @@
+<div [class.margin-width]="width == imageWidthValue.margin">
+    <div [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
+        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''"
+    >
+        <img [src]="url"
+            [style.height]="style?.height ? style?.height + 'px' : ''"
+            [style.object-fit]="style?.backgroundSize ? style?.backgroundSize : ''"/>
+    </div>
+</div>
