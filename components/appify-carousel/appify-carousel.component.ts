@@ -20,7 +20,7 @@ export enum CarouselAlignment {
 }
 
 export class CarouselStyle {
-    backgroundColor: string;
+    background_color: string;
     title: StyleFont;
     subtitle: StyleFont;
     padding: StylePadding;
