@@ -1,11 +1,11 @@
 <div id="container"
      [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}"
      [class.margin-width]="width == newsletterWidthValue.margin"
-     [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
-     [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
-     [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
-     [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
-     [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''">
+     [style.backgroundColor]="style?.background_color ? style?.background_color : ''"
+     [style.backgroundImage]="style?.background_image ? 'url(' + style?.background_image + ')' : ''"
+     [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
+     [style.backgroundRepeat]="style?.background_repeat ? style?.background_repeat : ''"
+     [style.backgroundPosition]="style?.background_position ? style?.background_position : ''">
     <div id="container-inner"
         [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
         [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"

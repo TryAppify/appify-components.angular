@@ -1,10 +1,10 @@
 <div id="container"
     [class.margin-width]="width == gridWidthValue.margin"
-    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
-    [style.backgroundImage]="style?.backgroundImage ? 'url(' + style?.backgroundImage + ')' : ''"
-    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
-    [style.backgroundRepeat]="style?.backgroundRepeat ? style?.backgroundRepeat : ''"
-    [style.backgroundPosition]="style?.backgroundPosition ? style?.backgroundPosition : ''">
+    [style.backgroundColor]="style?.background_color ? style?.background_color : ''"
+    [style.backgroundImage]="style?.background_image ? 'url(' + style?.background_image + ')' : ''"
+    [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
+    [style.backgroundRepeat]="style?.background_repeat ? style?.background_repeat : ''"
+    [style.backgroundPosition]="style?.background_position ? style?.background_position : ''">
     <div id="inner-container"
         [style.text-align]="alignment == gridAlignmentValue.center ? 'center' :
                             alignment == gridAlignmentValue.right ? 'right' : 'left'"
@@ -30,7 +30,7 @@
                 <div class="item-image"
                     *ngIf="item.image && item.image.length > 0"
                     [style.backgroundImage]="item.image ? 'url(' + item.image + ')' : ''"
-                    [style.backgroundSize]="style?.backgroundSize ? style?.backgroundSize : ''"
+                    [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
                     [style.margin-bottom]="item.title.length == 0 && item.subtitle.length == 0 && item.buttonTitle.length == 0 ? '0' : ''"
                     >
                 </div>
