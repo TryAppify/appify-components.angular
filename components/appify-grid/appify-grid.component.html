@@ -1,64 +1,126 @@
-<div id="container"
-    [class.margin-width]="width == gridWidthValue.margin"
-    [style.backgroundColor]="style?.background_color ? style?.background_color : ''"
-    [style.backgroundImage]="style?.background_image ? 'url(' + style?.background_image + ')' : ''"
-    [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
-    [style.backgroundRepeat]="style?.background_repeat ? style?.background_repeat : ''"
-    [style.backgroundPosition]="style?.background_position ? style?.background_position : ''">
-    <div id="inner-container"
-        [style.text-align]="alignment == gridAlignmentValue.center ? 'center' :
-                            alignment == gridAlignmentValue.right ? 'right' : 'left'"
-        [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
-        [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
-        [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
-        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
-        <div *ngFor="let t of temp(math.ceil(items.length / columns)).fill(0); let i = index"
-            class="row row-container"
-            [style.margin-bottom]="style?.rowSpacing ? style?.rowSpacing + 'px' : ''"
-            >
-            <div *ngFor="let item of items.slice(columns * i, columns * i + columns);"
-                class="col col-12"
-                [class.col-12]="columns == 1"
-                [class.col-sm-6]="columns == 2"
-                [class.col-sm-4]="columns == 3"
-                [class.col-sm-3]="columns == 4"
-                [class.col-sm-5ths]="columns == 5"
-                [class.col-sm-2]="columns == 6"
-                [style.padding-left]="style?.itemSpacing || style?.itemSpacing == 0 ? (style?.itemSpacing / 2) + 'px' : ''"
-                [style.padding-right]="style?.itemSpacing || style?.itemSpacing == 0 ? (style?.itemSpacing / 2) + 'px' : ''"
-                >
-                <div class="item-image"
-                    *ngIf="item.image && item.image.length > 0"
-                    [style.backgroundImage]="item.image ? 'url(' + item.image + ')' : ''"
-                    [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
-                    [style.margin-bottom]="item.title.length == 0 && item.subtitle.length == 0 && item.buttonTitle.length == 0 ? '0' : ''"
-                    >
-                </div>
-                <h5 *ngIf="item.title.length" class="headline-xs"
-                    [style.color]="style?.title?.color ? style?.title?.color : ''"
-                    [style.fontFamily]="style?.title?.font ? style?.title?.font : ''"
-                    [style.fontSize]="style?.title?.size ? style?.title?.size + 'px' : ''"
-                    [style.fontWeight]="style?.title?.weight ? style?.title?.weight : ''"
-                    [style.lineHeight]="style?.title?.lineHeight ? style?.title?.lineHeight + 'px' : ''"
-                    [style.letter-spacing]="style?.title?.letterSpacing ? style?.title?.letterSpacing + 'px' : ''"
-                    >{{ item.title }}</h5>
-                <div *ngIf="item.subtitle.length" class="vertical-item-spacer"></div>
-                <p *ngIf="item.subtitle.length" class="body-m subtitle"
-                    [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
-                    [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
-                    [style.fontSize]="style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''"
-                    [style.fontWeight]="style?.subtitle?.weight ? style?.subtitle?.weight : ''"
-                    [style.lineHeight]="style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''"
-                    [style.letter-spacing]="style?.subtitle?.letterSpacing ? style?.subtitle?.letterSpacing + 'px' : ''"
-                >{{ item.subtitle }}</p>
-                <div *ngIf="item.buttonTitle?.length" class="vertical-item-spacer"></div>
-                <appify-button *ngIf="item.buttonTitle?.length"
-                    [title]="item.buttonTitle"
-                    [url]="item.buttonURL"
-                    [padding]="buttonPadding"
-                    [alignment]="alignment"
-                    [style]="style?.button"></appify-button>
-            </div>
-        </div>
+<div
+  id="container"
+  [class.margin-width]="width == gridWidthValue.margin"
+  [style.backgroundColor]="
+    style?.background_color ? style?.background_color : ''
+  "
+  [style.backgroundImage]="
+    style?.background_image ? 'url(' + style?.background_image + ')' : ''
+  "
+  [style.backgroundSize]="style?.background_size ? style?.background_size : ''"
+  [style.backgroundRepeat]="
+    style?.background_repeat ? style?.background_repeat : ''
+  "
+  [style.backgroundPosition]="
+    style?.background_position ? style?.background_position : ''
+  "
+>
+  <div
+    id="inner-container"
+    [style.text-align]="
+      alignment == gridAlignmentValue.center
+        ? 'center'
+        : alignment == gridAlignmentValue.right
+        ? 'right'
+        : 'left'
+    "
+    [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
+    [style.padding-bottom]="
+      style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''
+    "
+    [style.padding-left]="
+      style?.padding?.left ? style?.padding?.left + 'px' : ''
+    "
+    [style.padding-right]="
+      style?.padding?.right ? style?.padding?.right + 'px' : ''
+    "
+  >
+    <div
+      *ngFor="let item of items"
+      class="column"
+      [class.col1]="columns == 1"
+      [class.col2]="columns == 2"
+      [class.col3]="columns == 3"
+      [class.col4]="columns == 4"
+      [class.col5]="columns == 5"
+      [class.col6]="columns == 6"
+      [style.padding-bottom]="style?.rowSpacing ? style?.rowSpacing + 'px' : ''"
+      [style.padding-left]="
+        style?.itemSpacing || style?.itemSpacing == 0
+          ? style?.itemSpacing / 2 + 'px'
+          : ''
+      "
+      [style.padding-right]="
+        style?.itemSpacing || style?.itemSpacing == 0
+          ? style?.itemSpacing / 2 + 'px'
+          : ''
+      "
+    >
+      <div
+        (click)="redirectToProduct(item.button_url)"
+        class="item-image"
+        [style.cursor]="item.button_url.length > 0 ? 'pointer' : ''"
+        *ngIf="item.image && item.image.length > 0"
+        [style.backgroundImage]="item.image ? 'url(' + item.image + ')' : ''"
+        [style.backgroundSize]="
+          style?.background_size ? style?.background_size : ''
+        "
+        [style.margin-bottom]="
+          item.title.length == 0 &&
+          item.subtitle.length == 0 &&
+          item.buttonTitle.length == 0
+            ? '0'
+            : ''
+        "
+      ></div>
+      <h5
+        *ngIf="item.title.length"
+        class="headline-xs"
+        [style.color]="style?.title?.color ? style?.title?.color : ''"
+        [style.fontFamily]="style?.title?.font ? style?.title?.font : ''"
+        [style.fontSize]="style?.title?.size ? style?.title?.size + 'px' : ''"
+        [style.fontWeight]="style?.title?.weight ? style?.title?.weight : ''"
+        [style.lineHeight]="
+          style?.title?.lineHeight ? style?.title?.lineHeight + 'px' : ''
+        "
+        [style.letter-spacing]="
+          style?.title?.letterSpacing ? style?.title?.letterSpacing + 'px' : ''
+        "
+      >
+        {{ item.title }}
+      </h5>
+      <div *ngIf="item.subtitle.length" class="vertical-item-spacer"></div>
+      <p
+        *ngIf="item.subtitle.length"
+        class="body-m subtitle"
+        [style.color]="style?.subtitle?.color ? style?.subtitle?.color : ''"
+        [style.fontFamily]="style?.subtitle?.font ? style?.subtitle?.font : ''"
+        [style.fontSize]="
+          style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''
+        "
+        [style.fontWeight]="
+          style?.subtitle?.weight ? style?.subtitle?.weight : ''
+        "
+        [style.lineHeight]="
+          style?.subtitle?.lineHeight ? style?.subtitle?.lineHeight + 'px' : ''
+        "
+        [style.letter-spacing]="
+          style?.subtitle?.letterSpacing
+            ? style?.subtitle?.letterSpacing + 'px'
+            : ''
+        "
+      >
+        {{ item.subtitle }}
+      </p>
+      <div *ngIf="item.buttonTitle?.length" class="vertical-item-spacer"></div>
+      <appify-button
+        *ngIf="item.buttonTitle?.length"
+        [title]="item.buttonTitle"
+        [url]="item.buttonURL"
+        [padding]="buttonPadding"
+        [alignment]="alignment"
+        [style]="style?.button"
+      ></appify-button>
     </div>
+  </div>
 </div>
