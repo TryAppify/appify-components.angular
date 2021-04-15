@@ -1,6 +1,7 @@
 @media screen and (max-width: 480px) {
     #inner-container {
-        padding: var(--spacing-medium) var(--spacing-medium) calc(var(--spacing-medium) / 2) !important;
+        padding: var(--spacing-medium) var(--spacing-medium)
+            calc(var(--spacing-medium) / 2) !important;
     }
 
     .col {

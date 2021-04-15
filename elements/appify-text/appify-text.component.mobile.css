@@ -1,12 +1,9 @@
 @media screen and (max-width: 480px) {
-    p {
-        max-width: var(--spacing-medium);
-        margin: auto;
-    }
-
-    .margin-width {
-        margin: auto;
-        max-width: 100%;
-        width: 100%;
-    }
+  .margin-width {
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    padding: var(--spacing-medium) var(--spacing-medium)
+      calc(var(--spacing-medium) / 2) !important;
+  }
 }
