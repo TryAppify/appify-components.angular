@@ -2,39 +2,34 @@ export class StyleButtonState {
     /// Color hex value
     color: string;
     /// Color hex value for the text
-    textColor: string;
+    text_color: string;
 
     init(object: any) {
         this.color = object.color
-        this.textColor = object.textColor
+        this.text_color = object.text_color
     }
 }
 
 export class StyleButton {
     /// Example: 9999px, 0, or any pixel string
-    borderRadius: string;
+    border_radius: string;
     /// Options: 0 = left, 1 = center, 2 = right
     alignment: number;
-
-    // DEPRECATABLE, in favor of `borderRadius`
-    // Options: square, rounded
-    // type: string;
-
     /// Options: none, filled, border
-    fillType: string;
+    fill_type: string;
     /// State information for normal state
-    normalState: StyleButtonState;
+    normal_state: StyleButtonState;
     /// State information for hover state
-    hoverState: StyleButtonState;
+    hover_state: StyleButtonState;
 
     init(object: any) {
-        this.borderRadius = object.borderRadius
+        this.border_radius = object.border_radius
         // this.type = object.type
-        this.fillType = object.fillType
-        this.normalState = new StyleButtonState()
-        this.normalState.init(object.normalState)
-        this.hoverState = new StyleButtonState()
-        this.hoverState.init(object.hoverState)
+        this.fill_type = object.fill_type
+        this.normal_state = new StyleButtonState()
+        this.normal_state.init(object.normal_state)
+        this.hover_state = new StyleButtonState()
+        this.hover_state.init(object.hover_state)
     }
 }
 
@@ -46,19 +41,19 @@ export class StyleFont {
     /// Options: any number value, size is in pixels
     size: number;
     /// Options: any number value, size is in pixels
-    lineHeight: number;
+    line_height: number;
     /// Supports hex strings representing colors
     color: string;
     /// Supports fractional number (e.g. - 0.1) on the spacing between letters in EM values
-    letterSpacing: number
+    letter_spacing: number
 
     init(object: any) {
         this.font = object.font
         this.weight = object.weight
         this.size = object.size
-        this.lineHeight = object.lineHeight
+        this.line_height = object.line_height
         this.color = object.color
-        this.letterSpacing = object.letterSpacing
+        this.letter_spacing = object.letter_spacing
     }
 }
 

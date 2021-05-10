@@ -49,16 +49,16 @@
             [class.col5]="columns == 5"
             [class.col6]="columns == 6"
             [style.padding-bottom]="
-                style?.rowSpacing ? style?.rowSpacing + 'px' : ''
+                style?.row_spacing ? style?.row_spacing + 'px' : ''
             "
             [style.padding-left]="
-                style?.itemSpacing || style?.itemSpacing == 0
-                    ? style?.itemSpacing / 2 + 'px'
+                style?.item_spacing || style?.item_spacing == 0
+                    ? style?.item_spacing / 2 + 'px'
                     : ''
             "
             [style.padding-right]="
-                style?.itemSpacing || style?.itemSpacing == 0
-                    ? style?.itemSpacing / 2 + 'px'
+                style?.item_spacing || style?.item_spacing == 0
+                    ? style?.item_spacing / 2 + 'px'
                     : ''
             "
         >
@@ -76,7 +76,7 @@
                 [style.margin-bottom]="
                     item.title.length == 0 &&
                     item.subtitle.length == 0 &&
-                    item.buttonTitle.length == 0
+                    item.button_title.length == 0
                         ? '0'
                         : ''
                 "
@@ -95,13 +95,13 @@
                     style?.title?.weight ? style?.title?.weight : ''
                 "
                 [style.lineHeight]="
-                    style?.title?.lineHeight
-                        ? style?.title?.lineHeight + 'px'
+                    style?.title?.line_height
+                        ? style?.title?.line_height + 'px'
                         : ''
                 "
                 [style.letter-spacing]="
-                    style?.title?.letterSpacing
-                        ? style?.title?.letterSpacing + 'px'
+                    style?.title?.letter_spacing
+                        ? style?.title?.letter_spacing + 'px'
                         : ''
                 "
             >
@@ -127,26 +127,26 @@
                     style?.subtitle?.weight ? style?.subtitle?.weight : ''
                 "
                 [style.lineHeight]="
-                    style?.subtitle?.lineHeight
-                        ? style?.subtitle?.lineHeight + 'px'
+                    style?.subtitle?.line_height
+                        ? style?.subtitle?.line_height + 'px'
                         : ''
                 "
                 [style.letter-spacing]="
-                    style?.subtitle?.letterSpacing
-                        ? style?.subtitle?.letterSpacing + 'px'
+                    style?.subtitle?.letter_spacing
+                        ? style?.subtitle?.letter_spacing + 'px'
                         : ''
                 "
             >
                 {{ item.subtitle }}
             </p>
             <div
-                *ngIf="item.buttonTitle?.length"
+                *ngIf="item.button_title?.length"
                 class="vertical-item-spacer"
             ></div>
             <appify-button
-                *ngIf="item.buttonTitle?.length"
-                [title]="item.buttonTitle"
-                [url]="item.buttonURL"
+                *ngIf="item.button_title?.length"
+                [title]="item.button_title"
+                [url]="item.button_url"
                 [padding]="buttonPadding"
                 [alignment]="alignment"
                 [style]="style?.button"

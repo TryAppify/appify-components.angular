@@ -1,19 +1,19 @@
 <div id="container"
     [class.margin-width]="width == textWidthValue.margin"
-    [style.backgroundColor]="style?.backgroundColor ? style?.backgroundColor : ''"
+    [style.backgroundColor]="style?.background_color ? style?.background_color : ''"
     [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
     [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
     [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
     [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
-    <p [class.h2]="textType == textTypeValue.header"
-        [class.paragraph]="textType == textTypeValue.body"
+    <p [class.headline]="textType == textTypeValue.header"
+        [class.body]="textType == textTypeValue.body"
         [style.color]="style?.text?.color ? style?.text?.color : ''"
         [style.fontFamily]="style?.text?.font ? style?.text?.font : ''"
         [style.fontSize]="style?.text?.size ? style?.text?.size + 'px' : ''"
         [style.fontWeight]="style?.text?.weight ? style?.text?.weight : ''"
-        [style.lineHeight]="style?.text?.lineHeight ? style?.text?.lineHeight + 'px' : ''"
+        [style.lineHeight]="style?.text?.line_height ? style?.text?.line_height + 'px' : ''"
         [style.text-align]="alignment == alignmentValue.right ? 'right' : alignment == alignmentValue.center ? 'center': 'left'"
-        [style.letter-spacing]="style?.text?.letterSpacing ? style?.text?.letterSpacing + 'px' : ''">
+        [style.letter-spacing]="style?.text?.letter_spacing ? style?.text?.letter_spacing + 'px' : ''">
       {{ text }}
     </p>
 </div>

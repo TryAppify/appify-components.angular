@@ -4,8 +4,8 @@
         [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
         [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''"
     >
-        <img [src]="url"
+        <img [src]="pageService.getImageMapResource(url)"
             [style.height]="style?.height ? style?.height + 'px' : ''"
-            [style.object-fit]="style?.backgroundSize ? style?.backgroundSize : ''"/>
+            [style.object-fit]="style?.background_size ? style?.background_size : ''"/>
     </div>
 </div>
