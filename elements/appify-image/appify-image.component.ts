@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { StyleFont, StylePadding } from '../../models/styles.model'
 
+import { PageService } from '@platform-services/page/page.service'
+
 export enum ImageWidth {
     full = 'full',
     margin = 'margin'
@@ -9,7 +11,7 @@ export enum ImageWidth {
 export class ImageStyle {
     height: number;
     padding: StylePadding;
-    backgroundSize: string;
+    background_size: string;
 }
 
 @Component({
@@ -24,6 +26,6 @@ export class AppifyImageComponent implements OnInit {
 
     get imageWidthValue() { return ImageWidth; }
 
-    constructor() { }
+    constructor(public pageService: PageService) { }
     ngOnInit() { }
 }

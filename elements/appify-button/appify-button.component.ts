@@ -54,27 +54,25 @@ export class AppifyButtonComponent implements OnInit {
         if (changes.style && changes.style.currentValue) {
             let current = changes.style.currentValue
 
-            console.log('Button Style: ' + JSON.stringify(current))
-
             // if (current.type) { this.style.type = current.type }
-            if (current.fillType) { this.style.fillType = current.fillType }
-            if (current.normalState) { this.style.normalState.color = current.normalState.color }
-            if (current.normalState) { this.style.normalState.textColor = current.normalState.textColor }
-            if (current.hoverState) { this.style.hoverState.color = current.hoverState.color }
-            if (current.hoverState) { this.style.hoverState.textColor = current.hoverState.textColor }
+            if (current.fill_type) { this.style.fill_type = current.fill_type }
+            if (current.normal_state) { this.style.normal_state.color = current.normal_state.color }
+            if (current.normal_state) { this.style.normal_state.text_color = current.normal_state.text_color }
+            if (current.hover_state) { this.style.hover_state.color = current.hover_state.color }
+            if (current.hover_state) { this.style.hover_state.text_color = current.hover_state.text_color }
         }
     }
 
     backgroundColor() {
         if (this.style == null) { return '' }
-        if (this.style.normalState == null) { return '' }
-        if (this.style.hoverState == null) { return '' }
+        if (this.style.normal_state == null) { return '' }
+        if (this.style.hover_state == null) { return '' }
 
         if (this.isHovering) {
-            return this.style.hoverState.color
+            return this.style.hover_state.color
         } else {
-            if (this.style.fillType == this.buttonFillTypeValue.border || this.style.fillType == this.buttonFillTypeValue.none) { return 'transparent' }
-            if (this.style.normalState && this.style.normalState.color) { return this.style.normalState.color }
+            if (this.style.fill_type == this.buttonFillTypeValue.border || this.style.fill_type == this.buttonFillTypeValue.none) { return 'transparent' }
+            if (this.style.normal_state && this.style.normal_state.color) { return this.style.normal_state.color }
         }
 
         return ''
@@ -82,19 +80,19 @@ export class AppifyButtonComponent implements OnInit {
 
     borderColor() {
         if (this.style == null) { return '' }
-        if (this.style.normalState == null) { return '' }
+        if (this.style.normal_state == null) { return '' }
 
-        if (this.style.fillType == this.buttonFillTypeValue.border) { return this.style.normalState.color }
+        if (this.style.fill_type == this.buttonFillTypeValue.border) { return this.style.normal_state.color }
         return 'transparent'
     }
 
     color() {
         if (this.style == null) { return '' }
-        if (this.style.normalState == null) { return '' }
-        if (this.style.hoverState == null) { return '' }
+        if (this.style.normal_state == null) { return '' }
+        if (this.style.hover_state == null) { return '' }
 
-        if (this.isHovering) { return this.style.hoverState.textColor }
-        return this.style.normalState.textColor
+        if (this.isHovering) { return this.style.hover_state.text_color }
+        return this.style.normal_state.text_color
     }
 
     click() {

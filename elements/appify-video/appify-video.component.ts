@@ -37,11 +37,6 @@ export class AppifyVideoComponent implements OnInit {
     get videoWidthValue() { return VideoWidth; }
     get alignmentValue() { return Alignment; }
 
-    constructor(private sanitizer: DomSanitizer) {
-        // this.safeURL =  this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
-    }
-
-    ngOnInit() {
-    }
-
+    constructor(private sanitizer: DomSanitizer) { }
+    ngOnInit() { }
 }
