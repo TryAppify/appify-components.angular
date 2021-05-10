@@ -22,7 +22,7 @@ export enum Alignment {
 export class TextStyle {
     padding: StylePadding;
     text: StyleFont;
-    backgroundColor: string;
+    background_color: string;
 }
 
 @Component({
@@ -45,26 +45,6 @@ export class AppifyTextComponent implements OnInit {
 
     constructor(public componentsService: CodelessComponentsService) { }
     ngOnInit() { }
-
-    getFontSize() {
-        // let ratioSize = this.getRatioSize()
-        // if (ratioSize) { return ratioSize + 'px' }
-
-        return ''
-        // let override = style?.text?.size ? style?.text?.size : ''
-    }
-
-    getRatioSize() {
-        if (!this.style || !this.style.text) { return '' }
-        if (!this.style.text.size) { return '' }
-
-        let marginWidth = this.componentsService.model.marginWidth
-        let fullTextSize = this.cleanPixelText(this.style.text.size)
-        let currentScreenWidth = this.componentsService.model.screenWidth
-        let ratio = currentScreenWidth / marginWidth
-
-        return (fullTextSize * ratio)
-    }
 
     cleanPixelText(string) {
         return string.replace(/px/g,'');

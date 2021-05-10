@@ -8,3 +8,23 @@ p {
     max-width: var(--size-default-margin);
     width: calc(100% - (var(--spacing-small) * 2)) !important;
 }
+
+.headline {
+    font-family: var(--typography-headline-m-font-family);
+    font-style: var(--typography-headline-m-font-style);
+    font-weight: var(--typography-headline-m-font-weight);
+    font-size: var(--typography-headline-m-font-size);
+    line-height: var(--typography-headline-m-line-height);
+    letter-spacing: var(--typography-headline-m-letter-spacing);
+    text-transform: var(--typography-headline-m-text-transform);
+}
+
+.body {
+    font-family: var(--typography-body-m-font-family);
+    font-style: var(--typography-body-m-font-style);
+    font-weight: var(--typography-body-m-font-weight);
+    font-size: var(--typography-body-m-font-size);
+    line-height: var(--typography-body-m-line-height);
+    letter-spacing: var(--typography-body-m-letter-spacing);
+    text-transform: var(--typography-body-m-text-transform);
+}
