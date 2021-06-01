@@ -63,26 +63,25 @@
             "
         >
             <div
-                (click)="redirectToProduct(item.button_url)"
                 class="item-image"
-                [style.cursor]="item.button_url.length > 0 ? 'pointer' : ''"
-                *ngIf="item.image && item.image.length > 0"
+                [style.cursor]="item?.button_url?.length > 0 ? 'pointer' : ''"
+                *ngIf="item?.image && item?.image?.length > 0"
                 [style.backgroundImage]="
-                    item.image ? 'url(' + item.image + ')' : ''
+                    item?.image ? 'url(' + item?.image + ')' : ''
                 "
                 [style.backgroundSize]="
                     style?.background_size ? style?.background_size : ''
                 "
                 [style.margin-bottom]="
-                    item.title.length == 0 &&
-                    item.subtitle.length == 0 &&
-                    item.button_title.length == 0
+                    item?.title?.length == 0 &&
+                    item?.subtitle?.length == 0 &&
+                    item?.button_title?.length == 0
                         ? '0'
                         : ''
                 "
             ></div>
             <h5
-                *ngIf="item.title.length"
+                *ngIf="item?.title?.length"
                 class="headline-xs"
                 [style.color]="style?.title?.color ? style?.title?.color : ''"
                 [style.fontFamily]="
@@ -105,14 +104,14 @@
                         : ''
                 "
             >
-                {{ item.title }}
+                {{ item?.title }}
             </h5>
             <div
-                *ngIf="item.subtitle.length"
+                *ngIf="item?.subtitle?.length"
                 class="vertical-item-spacer"
             ></div>
             <p
-                *ngIf="item.subtitle.length"
+                *ngIf="item?.subtitle?.length"
                 class="body-m subtitle"
                 [style.color]="
                     style?.subtitle?.color ? style?.subtitle?.color : ''
@@ -137,16 +136,16 @@
                         : ''
                 "
             >
-                {{ item.subtitle }}
+                {{ item?.subtitle }}
             </p>
             <div
-                *ngIf="item.button_title?.length"
+                *ngIf="item?.button_title?.length"
                 class="vertical-item-spacer"
             ></div>
             <appify-button
-                *ngIf="item.button_title?.length"
-                [title]="item.button_title"
-                [url]="item.button_url"
+                *ngIf="item?.button_title?.length"
+                [title]="item?.button_title"
+                [url]="item?.button_url"
                 [padding]="buttonPadding"
                 [alignment]="alignment"
                 [style]="style?.button"

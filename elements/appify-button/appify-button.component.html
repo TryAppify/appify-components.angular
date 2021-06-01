@@ -33,10 +33,12 @@
         type="button"
         [class.margin-width]="width == containerWidthValue.margin"
         [class.margin-full]="width == containerWidthValue.full"
-        [ngStyle]="{ backgroundColor: backgroundColor() }"
+        [style.backgroundColor]="backgroundColor()"
         [style.borderColor]="borderColor()"
         [style.color]="color()"
-        [style.border-radius]="style?.borderRadius ? style?.borderRadius : ''"
+        [style.border-radius]="
+            style?.borderRadius ? style?.borderRadius + 'px' : ''
+        "
     >
         {{ title }}
     </button>
