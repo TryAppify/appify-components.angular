@@ -62,82 +62,42 @@
                     : ''
             "
         >
-            <div
-                class="item-image"
-                [style.cursor]="item?.button_url?.length > 0 ? 'pointer' : ''"
-                *ngIf="item?.image && item?.image?.length > 0"
-                [style.backgroundImage]="
-                    item?.image ? 'url(' + item?.image + ')' : ''
-                "
-                [style.backgroundSize]="
-                    style?.background_size ? style?.background_size : ''
-                "
-                [style.margin-bottom]="
-                    item?.title?.length == 0 &&
-                    item?.subtitle?.length == 0 &&
-                    item?.button_title?.length == 0
-                        ? '0'
-                        : ''
-                "
-            ></div>
-            <h5
-                *ngIf="item?.title?.length"
-                class="headline-xs"
-                [style.color]="style?.title?.color ? style?.title?.color : ''"
-                [style.fontFamily]="
-                    style?.title?.font ? style?.title?.font : ''
-                "
-                [style.fontSize]="
-                    style?.title?.size ? style?.title?.size + 'px' : ''
-                "
-                [style.fontWeight]="
-                    style?.title?.weight ? style?.title?.weight : ''
-                "
-                [style.lineHeight]="
-                    style?.title?.line_height
-                        ? style?.title?.line_height + 'px'
-                        : ''
-                "
-                [style.letter-spacing]="
-                    style?.title?.letter_spacing
-                        ? style?.title?.letter_spacing + 'px'
-                        : ''
-                "
-            >
-                {{ item?.title }}
-            </h5>
+            <a [href]="item?.button_url">
+                <div
+                    class="item-image"
+                    [style.cursor]="
+                        item?.button_url?.length > 0 ? 'pointer' : ''
+                    "
+                    *ngIf="item?.image && item?.image?.length > 0"
+                    [style.backgroundImage]="
+                        item?.image ? 'url(' + item?.image + ')' : ''
+                    "
+                    [style.backgroundSize]="
+                        style?.background_size ? style?.background_size : ''
+                    "
+                    [style.margin-bottom]="
+                        item?.title?.length == 0 &&
+                        item?.subtitle?.length == 0 &&
+                        item?.button_title?.length == 0
+                            ? '0'
+                            : ''
+                    "
+                ></div
+            ></a>
+            <appify-text
+                [text]="item.title"
+                [style]="style.title"
+            ></appify-text>
+
             <div
                 *ngIf="item?.subtitle?.length"
                 class="vertical-item-spacer"
             ></div>
-            <p
-                *ngIf="item?.subtitle?.length"
-                class="body-m subtitle"
-                [style.color]="
-                    style?.subtitle?.color ? style?.subtitle?.color : ''
-                "
-                [style.fontFamily]="
-                    style?.subtitle?.font ? style?.subtitle?.font : ''
-                "
-                [style.fontSize]="
-                    style?.subtitle?.size ? style?.subtitle?.size + 'px' : ''
-                "
-                [style.fontWeight]="
-                    style?.subtitle?.weight ? style?.subtitle?.weight : ''
-                "
-                [style.lineHeight]="
-                    style?.subtitle?.line_height
-                        ? style?.subtitle?.line_height + 'px'
-                        : ''
-                "
-                [style.letter-spacing]="
-                    style?.subtitle?.letter_spacing
-                        ? style?.subtitle?.letter_spacing + 'px'
-                        : ''
-                "
-            >
-                {{ item?.subtitle }}
-            </p>
+            <appify-text
+                [text]="item.subtitle"
+                [style]="style.subtitle"
+            ></appify-text>
+
             <div
                 *ngIf="item?.button_title?.length"
                 class="vertical-item-spacer"
