@@ -82,12 +82,12 @@
                             ? '0'
                             : ''
                     "
-                ></div
-            ></a>
-            <appify-text
-                [text]="item.title"
-                [style]="style.title"
-            ></appify-text>
+                ></div>
+                <appify-text
+                    [text]="item.title"
+                    [style]="style.title"
+                ></appify-text>
+            </a>
 
             <div
                 *ngIf="item?.subtitle?.length"
