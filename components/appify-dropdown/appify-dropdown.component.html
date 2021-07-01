@@ -66,16 +66,20 @@
             />
         </svg>
     </div>
-    <div *ngIf="showOptions" class="options-container">
+    <div
+        *ngIf="showOptions"
+        class="options-container"
+        [style.border-width]="style.border_width ? style.border_width : ''"
+        [style.border-color]="style.border_color ? style.border_color : ''"
+        [style.border-style]="'solid'"
+        [style.background-color]="
+            style.background_color ? style.background_color : ''
+        "
+        [style.border-top]="'0px'"
+    >
         <div
             *ngFor="let option of options"
             (click)="selectOption(option)"
-            [style.border-width]="style.border_width ? style.border_width : ''"
-            [style.border-color]="style.border_color ? style.border_color : ''"
-            [style.border-style]="'solid'"
-            [style.background-color]="
-                style.background_color ? style.background_color : ''
-            "
             class="option"
         >
             <appify-text
