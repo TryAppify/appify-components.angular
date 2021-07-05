@@ -68,9 +68,10 @@
                     [style.cursor]="
                         item?.button_url?.length > 0 ? 'pointer' : ''
                     "
-                    *ngIf="item?.image && item?.image?.length > 0"
                     [style.backgroundImage]="
-                        item?.image ? 'url(' + item?.image + ')' : ''
+                        item?.image
+                            ? 'url(' + item?.image + ')'
+                            : 'url(../../../../assets/global/widget/placeholder.png)'
                     "
                     [style.backgroundSize]="
                         style?.background_size ? style?.background_size : ''
