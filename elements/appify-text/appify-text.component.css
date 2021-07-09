@@ -1,12 +1,12 @@
 p {
-  max-width: var(--size-default-margin);
-  margin: auto;
+    max-width: var(--size-default-margin);
+    margin: auto;
 }
 
 .margin-width {
-  margin: auto;
-  max-width: var(--size-default-margin);
-  width: calc(100% - (var(--spacing-small) * 2)) !important;
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
 }
 
 .headline {
@@ -17,6 +17,7 @@ p {
     line-height: var(--typography-headline-m-line-height);
     letter-spacing: var(--typography-headline-m-letter-spacing);
     text-transform: var(--typography-headline-m-text-transform);
+    white-space: nowrap;
 }
 
 .body {
