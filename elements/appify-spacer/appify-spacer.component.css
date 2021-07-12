@@ -1,3 +1,9 @@
 div {
     height: var(--size-section-padding);
 }
+
+.selectable {
+    border: 2px solid #3040C4 !important;
+    cursor: pointer;
+    margin: 0px !important;
+}

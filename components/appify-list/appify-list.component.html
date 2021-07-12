@@ -11,7 +11,7 @@
     [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
     <div id="container" *ngFor="let item of items">
         <div>
-            <img [src]="item.image" />
+            <img [src]="item.image" [style.border-radius]="style?.corner_radius ? style?.corner_radius + 'px' : ''" />
         </div>
 
         <div>

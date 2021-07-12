@@ -1,6 +1,6 @@
+<!-- [style.text-align]="alignment == carouselAlignmentValue.center ? 'center' :
+                    alignment == carouselAlignmentValue.right ? 'right' : 'left'" -->
 <div id="container"
-    [style.text-align]="alignment == carouselAlignmentValue.center ? 'center' :
-                        alignment == carouselAlignmentValue.right ? 'right' : 'left'"
     [class.margin-width]="width == carouselWidthValue.margin"
     [style.backgroundColor]="style?.background_color ? style?.background_color : ''"
     [style.backgroundImage]="style?.background_image ? 'url(' + style?.background_image + ')' : ''"
@@ -9,12 +9,18 @@
         [style.padding-top]="style?.padding?.top ? style?.padding?.top + 'px' : ''"
         [style.padding-bottom]="style?.padding?.bottom ? style?.padding?.bottom + 'px' : ''"
         [style.padding-left]="style?.padding?.left ? style?.padding?.left + 'px' : ''"
-        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''">
+        [style.padding-right]="style?.padding?.right ? style?.padding?.right + 'px' : ''"
+        >
         <div class="carousel-container">
-            <div *ngFor="let item of items" class="col-6 col-md-3"
+            <div *ngFor="let item of items" class="col-6 col-md-3" style="max-width: 9999px; padding-left: 0; padding-right: 0;"
+            [style.margin-right]="style?.item_spacing ? style?.item_spacing + 'px' : ''"
+            [style.width]="style?.item_width ? style?.item_width + 'px' : ''"
             [style.text-align]="alignment == carouselAlignmentValue.center ? 'center' :
                                 alignment == carouselAlignmentValue.right ? 'right' : 'left'">
-                <img [src]="item.image" style="width: 100%; height: auto; vertical-align: top;" />
+                <img [src]="item.image"
+                     [style.height]="style?.image_height ? style?.image_height + 'px' : 'auto'"
+                     [style.border-radius]="style?.corner_radius ? style?.corner_radius + 'px' : ''"
+                     style="width: 100%; height: auto; vertical-align: top;" />
                 <div class="vertical-spacing-image"></div>
                 <h5 class="headline-xs"
                     [style.color]="style?.title?.color ? style?.title?.color : ''"

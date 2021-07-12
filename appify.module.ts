@@ -24,11 +24,17 @@ import { AppifyCtaComponent } from './components/appify-cta/appify-cta.component
 import { AppifyFeatureComponent } from './components/appify-feature/appify-feature.component';
 import { AppifyFormComponent } from './components/appify-form/appify-form.component';
 import { AppifyGridComponent } from './components/appify-grid/appify-grid.component';
+import { AppifyGridCellVariation000Component } from './components/appify-grid/cell-variation-000/grid-cell-variation-000.component';
+import { AppifyGridCellVariation001Component } from './components/appify-grid/cell-variation-001/grid-cell-variation-001.component';
 import { AppifyListComponent } from './components/appify-list/appify-list.component';
 import { AppifyNewsletterComponent } from './components/appify-newsletter/appify-newsletter.component';
 import { AppifySliderComponent } from './components/appify-slider/appify-slider.component';
 import { AppifyTestimonialComponent } from './components/appify-testimonial/appify-testimonial.component'
 import { AppifyWallComponent } from './components/appify-wall/appify-wall.component';
+
+// Layouts
+import { AppifyHorizontalStackComponent } from './layouts/appify-horizontal-stack/appify-horizontal-stack.component';
+import { AppifyVerticalStackComponent } from './layouts/appify-vertical-stack/appify-vertical-stack.component';
 
 @NgModule({
     imports: [
@@ -47,6 +53,8 @@ import { AppifyWallComponent } from './components/appify-wall/appify-wall.compon
         AppifyCtaComponent,
         AppifyFeatureComponent,
         AppifyGridComponent,
+        AppifyGridCellVariation000Component,
+        AppifyGridCellVariation001Component,
         AppifyNavigationHeaderComponent,
         AppifyNavigationFooterComponent,
         AppifyImageComponent,
@@ -60,7 +68,9 @@ import { AppifyWallComponent } from './components/appify-wall/appify-wall.compon
         AppifySliderComponent,
         AppifyTestimonialComponent,
         AppifyWallComponent,
-        AppifyIndicatorsComponent
+        AppifyIndicatorsComponent,
+        AppifyHorizontalStackComponent,
+        AppifyVerticalStackComponent
     ],
     providers: [
         CodelessComponentsService
@@ -84,7 +94,9 @@ import { AppifyWallComponent } from './components/appify-wall/appify-wall.compon
         AppifyNewsletterComponent,
         AppifySliderComponent,
         AppifyTestimonialComponent,
-        AppifyWallComponent
+        AppifyWallComponent,
+        AppifyHorizontalStackComponent,
+        AppifyVerticalStackComponent
     ],
     entryComponents: [
 

@@ -68,7 +68,7 @@ export class AppifySliderComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.buttonPadding.top = 16
+        this.buttonPadding.top = 0
         this.buttonPadding.bottom = 0
         this.buttonPadding.left = 0
         this.buttonPadding.right = 0

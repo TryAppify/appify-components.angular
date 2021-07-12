@@ -1,9 +1,5 @@
-import { Component, OnInit, Input } from "@angular/core";
-import {
-    StyleButton,
-    StyleFont,
-    StylePadding,
-} from "../../models/styles.model";
+import { Component, OnInit, Input } from '@angular/core';
+import { StyleButton, StyleFont, StylePadding } from '../../models/styles.model'
 
 export class GridModel {
     image: string;
@@ -14,19 +10,17 @@ export class GridModel {
 }
 
 export enum GridWidth {
-    full = "full",
-    margin = "margin",
+    full = 'full',
+    margin = 'margin'
 }
 
 export enum GridAlignment {
-    left = "left",
-    center = "center",
-    right = "right",
+    left = 'left',
+    center = 'center',
+    right = 'right'
 }
 
 export class GridStyle {
-    rowSpacing: number;
-    itemSpacing: number;
     display: boolean;
     columns: number;
     alignment: string;
@@ -46,46 +40,32 @@ export class GridStyle {
 }
 
 @Component({
-    selector: "appify-grid",
-    templateUrl: "./appify-grid.component.html",
-    styleUrls: [
-        "./appify-grid.component.css",
-        "./appify-grid.component.tablet.css",
-        "./appify-grid.component.mobile.css",
-    ],
+  selector: 'appify-grid',
+  templateUrl: './appify-grid.component.html',
+  styleUrls: ['./appify-grid.component.css', './appify-grid.component.tablet.css', './appify-grid.component.mobile.css']
 })
 export class AppifyGridComponent implements OnInit {
-    @Input() headline: String = "";
-    @Input() subtitle: String = "";
-    @Input() columns: number = 2;
-    @Input() width: GridWidth = GridWidth.full;
-    @Input() alignment: GridAlignment = GridAlignment.left;
-    @Input() style: GridStyle = new GridStyle();
-    @Input() items: Array<GridModel> = [];
+    @Input() headline: String = ''
+    @Input() subtitle: String = ''
+    @Input() columns: number = 2
+    @Input() width: GridWidth = GridWidth.full
+    @Input() alignment: GridAlignment = GridAlignment.left
+    @Input() style: GridStyle = new GridStyle()
+    @Input() items: Array<GridModel> = []
 
-    buttonPadding: StylePadding = new StylePadding();
+    buttonPadding: StylePadding = new StylePadding()
 
     temp = Array;
     math = Math;
-    get gridWidthValue() {
-        return GridWidth;
-    }
-    get gridAlignmentValue() {
-        return GridAlignment;
-    }
+    get gridWidthValue() { return GridWidth; }
+    get gridAlignmentValue() { return GridAlignment; }
 
-    constructor() {}
+    constructor() { }
 
     ngOnInit() {
-        this.buttonPadding.top = 0;
-        this.buttonPadding.bottom = 32;
-        this.buttonPadding.left = 0;
-        this.buttonPadding.right = 0;
-    }
-    redirectToProduct(product_url: string) {
-        if (!product_url) {
-            return;
-        }
-        window.open(product_url, "_blank");
+        this.buttonPadding.top = 0
+        this.buttonPadding.bottom = 32
+        this.buttonPadding.left = 0
+        this.buttonPadding.right = 0
     }
 }

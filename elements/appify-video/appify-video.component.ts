@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { StylePadding } from '../../models/styles.model'
+
+import { EditBlockElementItem } from '../appify-image/appify-image.component'
 
 export enum VideoWidth {
     full = 'full',
@@ -24,6 +26,7 @@ export enum Alignment {
   styleUrls: ['./appify-video.component.css']
 })
 export class AppifyVideoComponent implements OnInit {
+    @Input() identifier: string = ''
     @Input()
     set url(url: string) {
         if (url && url.length ==  0) { return }
@@ -33,10 +36,23 @@ export class AppifyVideoComponent implements OnInit {
     @Input() style: VideoStyle = new VideoStyle()
     @Input() width: VideoWidth = VideoWidth.margin
 
+    @Output() editBlockElement = new EventEmitter<EditBlockElementItem>();
+    hoveringElement: string = null
+    hoveringIndex: number = 0
+
     safeURL: SafeResourceUrl;
     get videoWidthValue() { return VideoWidth; }
     get alignmentValue() { return Alignment; }
 
     constructor(private sanitizer: DomSanitizer) { }
     ngOnInit() { }
+
+    emitBlockSelect(index, type) {
+        let item: EditBlockElementItem = new EditBlockElementItem()
+        item.identifier = this.identifier
+        item.index = index
+        item.selectedType = type
+
+        this.editBlockElement.emit(item)
+    }
 }
