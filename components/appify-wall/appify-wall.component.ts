@@ -20,6 +20,7 @@ export class AppifyWallComponent implements OnInit {
     @Input() maxWidth: number = 800
     @Input() alignment: WallAlignment = WallAlignment.left
     @Input() items: Array<WallModel> = []
+    @Input() style: any = {}
 
     /// Return the heroAlignment value computed in the component since enum is not
     /// accessible outside of this scope.

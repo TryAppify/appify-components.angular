@@ -1,5 +1,9 @@
 <div
     id="container"
+    (click)="emitBlockSelect(0, 'text')"
+    (mouseover)="hoveringElement = 'text'; hoveringIndex = 0"
+    (mouseout)="hoveringElement = null"
+    [class.selectable]="hoveringElement == 'text' && hoveringIndex == 0"
     [class.margin-width]="width == textWidthValue.margin"
     [style.backgroundColor]="
         style?.background_color ? style?.background_color : ''

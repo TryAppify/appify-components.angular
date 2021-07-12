@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 import { CodelessComponentsService } from "../../services/codeless-components.service";
 import { StyleFont, StylePadding } from "../../models/styles.model";
+
+import { EditBlockElementItem } from "../appify-image/appify-image.component";
 
 export enum TextType {
     header = "header",
@@ -31,11 +33,16 @@ export class TextStyle {
     styleUrls: ["./appify-text.component.css"],
 })
 export class AppifyTextComponent implements OnInit {
+    @Input() identifier: string = "";
     @Input() text: String = "";
     @Input() textType: TextType = TextType.header;
     @Input() alignment: Alignment = Alignment.left;
     @Input() width: TextWidth = TextWidth.full;
     @Input() style: TextStyle = new TextStyle();
+
+    @Output() editBlockElement = new EventEmitter<EditBlockElementItem>();
+    hoveringElement: string = null;
+    hoveringIndex: number = 0;
 
     /// Return the enum value computed in the component since enum is not
     /// accessible outside of this scope.
@@ -54,5 +61,14 @@ export class AppifyTextComponent implements OnInit {
 
     cleanPixelText(string) {
         return string.replace(/px/g, "");
+    }
+
+    emitBlockSelect(index, type) {
+        let item: EditBlockElementItem = new EditBlockElementItem();
+        item.identifier = this.identifier;
+        item.index = index;
+        item.selectedType = type;
+
+        this.editBlockElement.emit(item);
     }
 }

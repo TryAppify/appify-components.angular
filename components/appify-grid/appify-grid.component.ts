@@ -25,8 +25,6 @@ export enum GridAlignment {
 }
 
 export class GridStyle {
-    rowSpacing: number;
-    itemSpacing: number;
     display: boolean;
     columns: number;
     alignment: string;
