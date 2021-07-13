@@ -1,12 +1,13 @@
 p {
-  max-width: var(--size-default-margin);
-  margin: auto;
+    max-width: var(--size-default-margin);
+    margin: auto;
+    /* border: 2px solid transparent; */
 }
 
 .margin-width {
-  margin: auto;
-  max-width: var(--size-default-margin);
-  width: calc(100% - (var(--spacing-small) * 2)) !important;
+    margin: auto;
+    max-width: var(--size-default-margin);
+    width: calc(100% - (var(--spacing-small) * 2)) !important;
 }
 
 .headline {
@@ -27,4 +28,9 @@ p {
     line-height: var(--typography-body-m-line-height);
     letter-spacing: var(--typography-body-m-letter-spacing);
     text-transform: var(--typography-body-m-text-transform);
+}
+
+.selectable {
+    outline: 2px solid #3040C4 !important;
+    cursor: pointer;
 }

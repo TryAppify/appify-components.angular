@@ -16,7 +16,9 @@
         <div *ngIf="featureAlignment == featureAlignmentValue.left"
             class="col-md-6 col-sm-12 col-12 left-align-inner"
             [class.full-width]="width == featureWidthValue.full">
-            <img [src]="imageURL" [style.minHeight]="minimumHeight + 'px'" />
+            <img [src]="imageURL"
+                 [style.border-radius]="style?.corner_radius ? style?.corner_radius + 'px' : ''"
+                 [style.minHeight]="minimumHeight + 'px'" />
         </div>
 
         <div class="text-container col-md-6 col-sm-12"
@@ -66,7 +68,9 @@
         <div *ngIf="featureAlignment == featureAlignmentValue.right"
             class="col-md-6 col-sm-12 col-12 right-align-inner"
             [class.full-width]="width == featureWidthValue.full">
-            <img [src]="imageURL" [style.minHeight]="minimumHeight + 'px'" />
+            <img [src]="imageURL"
+                 [style.border-radius]="style?.corner_radius ? style?.corner_radius + 'px' : ''"
+                 [style.minHeight]="minimumHeight + 'px'" />
         </div>
     </div>
 </div>

@@ -1,0 +1,16 @@
+.item-image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: var(--spacing-small);
+}
+
+.subtitle  {
+    flex: 1;
+}
+
+.vertical-item-spacer {
+    height: var(--spacing-small);
+}

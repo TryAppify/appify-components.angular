@@ -12,3 +12,9 @@ img {
     max-width: var(--size-default-margin);
     padding: 0 var(--spacing-small);
 }
+
+.selectable-image {
+    outline: 2px solid #3040C4 !important;
+    cursor: pointer;
+    margin: 0px;
+}

@@ -1,3 +1,9 @@
 div > div {
     margin: auto;
 }
+
+.selectable {
+    border: 2px solid #3040C4 !important;
+    cursor: pointer;
+    margin: -2px !important;
+}
