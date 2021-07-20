@@ -80,11 +80,4 @@ export class AppifyGridComponent implements OnInit {
         this.buttonPadding.left = 0;
         this.buttonPadding.right = 0;
     }
-    redirectToProduct(product: any) {
-        if (!product) {
-            return;
-        }
-
-        window.open(product.button_url, "_blank");
-    }
 }
