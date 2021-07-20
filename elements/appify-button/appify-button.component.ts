@@ -10,8 +10,6 @@ import { StyleButton, StylePadding } from "../../models/styles.model";
 
 import { EditBlockElementItem } from "../appify-image/appify-image.component";
 
-import { EditBlockElementItem } from "../appify-image/appify-image.component";
-
 export enum ButtonType {
     square = "square",
     rounded = "rounded",
@@ -166,15 +164,6 @@ export class AppifyButtonComponent implements OnInit {
         }
 
         this.didClick.emit();
-    }
-
-    emitBlockSelect(index, type) {
-        let item: EditBlockElementItem = new EditBlockElementItem();
-        item.identifier = this.identifier;
-        item.index = index;
-        item.selectedType = type;
-
-        this.editBlockElement.emit(item);
     }
 
     emitBlockSelect(index, type) {

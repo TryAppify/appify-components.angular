@@ -11,12 +11,9 @@
     max-width: 100%;
     margin: auto;
     padding: calc(var(--size-section-padding) / 2) var(--spacing-xxLarge);
-<<<<<<< HEAD
 }
 #inner-container a {
     text-decoration: none;
-=======
->>>>>>> master
 }
 
 .margin-width {
@@ -50,7 +47,6 @@ img {
     margin-right: 0;
 }
 
-<<<<<<< HEAD
 .item-image {
     width: 100%;
     height: 0;
@@ -61,8 +57,4 @@ img {
     margin-bottom: var(--spacing-small);
 }
 .row-container {
-=======
-.row-container {
-
->>>>>>> master
 }
