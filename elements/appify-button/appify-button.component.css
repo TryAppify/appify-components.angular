@@ -26,10 +26,7 @@ button {
     max-width: var(--size-default-margin);
     width: calc(100% - (var(--spacing-small) * 2)) !important;
 }
-.margin-full {
-    width: 100% !important;
-}
+
 .selectable {
-    outline: 2px solid #3040c4 !important;
     cursor: pointer;
 }
